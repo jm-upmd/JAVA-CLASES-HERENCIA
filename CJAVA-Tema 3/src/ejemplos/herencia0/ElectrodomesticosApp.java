@@ -34,14 +34,16 @@ public class ElectrodomesticosApp {
              * Ejecutamos en cada uno su propia version del metodo precioFinal
              */
    
-            if(listaElectrodomesticos[i] instanceof Electrodomestico){
+            if(listaElectrodomesticos[i] instanceof Electrodomestico){   // Esto siempre va a ser true
                 sumaElectrodomesticos+=listaElectrodomesticos[i].precioFinal();
                 numElectrodomesticos++;
             }
+            
             if(listaElectrodomesticos[i] instanceof Lavadora){
                 sumaLavadoras+=listaElectrodomesticos[i].precioFinal();
                 numLavadoras ++;
             }
+            
             if(listaElectrodomesticos[i] instanceof Television){
                 sumaTelevisiones+=listaElectrodomesticos[i].precioFinal();
                 numTelevisores++;
@@ -49,7 +51,7 @@ public class ElectrodomesticosApp {
         }
    
         //Mostramos los resultados
-        System.out.println("Num. electrodoméstios: " + numElectrodomesticos);
+        System.out.println("Num. electrodomÃ©stios: " + numElectrodomesticos);
         System.out.println("La suma del precio de los electrodomesticos es de "+sumaElectrodomesticos);
         System.out.println("Num. lavadoras: " + numLavadoras);
         System.out.println("La suma del precio de las lavadoras es de "+sumaLavadoras);

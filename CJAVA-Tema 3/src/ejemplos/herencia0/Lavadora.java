@@ -33,6 +33,7 @@ public class Lavadora extends Electrodomestico {
     // Reescritura del método precioFinal del la clase padre
     @Override
     public double precioFinal(){
+    	//System.out.println("Dentro de precioFinal Lavadora.");
     	
         //Invocamos el método precioFinal del método padre
     	// que aplica recargo por peso y consumo energético
