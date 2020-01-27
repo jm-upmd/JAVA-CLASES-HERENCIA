@@ -1,6 +1,14 @@
 package ejemplos.herencia0;
 
 public class Electrodomestico {
+	
+	/* Las constantes y atributos de clase los definimos como protected
+	 * así:
+	 * 	- se pueden heredar al no ser private
+	 * 	- desde una clase hija de Eletrodomésticos creada dentro del paquete herencia0
+	 * 		o desde otro paquetee tendremos acceso a ellos.
+	 * 		
+	 */
 	 //Constantes
 	   
     /**
@@ -45,7 +53,7 @@ public class Electrodomestico {
      */
     protected double peso;
    
-    //M�todos privados
+    //Métodos privados
    
     private void comprobarColor(String color){
    
@@ -85,7 +93,7 @@ public class Electrodomestico {
           
     }
    
-    //M�todos publicos  
+    //Métodos públicos  
     /**
      * Devuelve el precio base del electrodomestico
      * @return precio base del electrodomestico
@@ -120,6 +128,8 @@ public class Electrodomestico {
      * @return precio final del electrodomestico
      */
     public double precioFinal(){
+    	
+    	// incremento precio según consumo energético
         double plus=0;
         switch(consumoEnergetico){
             case 'A':
@@ -141,6 +151,8 @@ public class Electrodomestico {
                 plus+=10;
                 break;
         }
+        
+        // incremento precio según peso
    
         if(peso>=0 && peso<19){
             plus+=10;
@@ -183,6 +195,7 @@ public class Electrodomestico {
     public Electrodomestico(double precioBase, double peso, char consumoEnergetico, String color){
         this.precioBase=precioBase;
         this.peso=peso;
+        // Asignan consumoEnergetico y color si son válidos y si no asigna valores por defecto
         comprobarConsumoEnergetico(consumoEnergetico);
         comprobarColor(color);
     }

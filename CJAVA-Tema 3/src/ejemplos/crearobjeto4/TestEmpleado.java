@@ -11,7 +11,7 @@ public class TestEmpleado {
 		
 		for (int i = 0; i < empleados.length; i++) {
 			Empleado e = empleados[i];
-			if (e.getDepartamento().compareTo("COMPRAS") == 0 && e.getNomina() % 3 == 0) {
+			if (e.getDepartamento().compareTo("COMPRAS") == 0 && e.getNomina() % 2 != 0) {
 				System.out.println(e.getNombre() + " " + e.getApellidos());
 			}
 		}		

@@ -5,14 +5,14 @@ public class Television extends Electrodomestico {
 	//Constantes
 	  
     /**
-     * Resolucion por defecto
+     * Resolución por defecto
      */
     private final static int RESOLUCION_DEF=20;
   
     //Atributos
   
     /**
-     * Resolucion del televisor
+     * Resolución del televisor
      */
     private int resolucion;
   
@@ -21,17 +21,19 @@ public class Television extends Electrodomestico {
      */
     private boolean sintonizadorTDT;
   
-    //M�todos publicos
+    //Métodos publicos
   
     /**
      * Precio final de la television
      * @return precio final de la television
      */
+    // Sobrescribe método del padre
     public double precioFinal(){
-        //Invocamos el m�todo precioFinal del m�todo padre
+        //Invocamos el método precioFinal del método padre
+    	// para incrementar precio según consumo energ. y peso
         double plus=super.precioFinal();
   
-        //A�adimos el codigo necesario
+        //Sumamos plus asicional según resoulución
         if (resolucion>40){
             plus+=precioBase*0.3;
         }

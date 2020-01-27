@@ -8,9 +8,12 @@ public class Fecha {
 
 	// Constructor 1
 	public Fecha() {
+		//this(1,1,2000);
 		dia = 1; 
 		mes = 1; 
 		anio = 2000;
+		
+		
 	}
 
 	// Constructor 2

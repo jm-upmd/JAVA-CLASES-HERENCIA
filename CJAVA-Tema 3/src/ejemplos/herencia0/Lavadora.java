@@ -15,7 +15,7 @@ public class Lavadora extends Electrodomestico {
      */
     private int carga;
   
-    //Métodos publicos
+    //MÃ©todos pÃºblicos
   
     /**
      * Devuelve la carga de la lavadora
@@ -29,11 +29,18 @@ public class Lavadora extends Electrodomestico {
      * Precio final de la lavadora
      * @return precio final de la lavadora
      */
+    
+    // Reescritura del mÃ©todo precioFinal del la clase padre
+    @Override
     public double precioFinal(){
-        //Invocamos el método precioFinal del método padre
+    	
+        //Invocamos el mÃ©todo precioFinal del mÃ©todo padre
+    	// que aplica recargo por peso y consumo energÃ©tico
         double plus=super.precioFinal();
   
-        //añadimos el código necesario
+        	
+        // en el caso de una lavadora tiene un recargo adicional
+        // si la carga de lavado en mayor de 30
         if (carga>30){
             plus+=50;
         }

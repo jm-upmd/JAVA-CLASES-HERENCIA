@@ -1,5 +1,6 @@
 package ejemplos.herencia1;
 
+import ejemplos.herencia0.Electrodomestico;
 import leer.Leer;
 
 public class GestorDeposito {
@@ -10,6 +11,9 @@ public class GestorDeposito {
 		double tipoInteres;
 		double tipoInteresAmpliado;
 		double capitalAmpliado;
+		
+
+		
 		
 		// Datos para el depóstio básico
 		System.out.println("Introduce datos para el depósito básico");
